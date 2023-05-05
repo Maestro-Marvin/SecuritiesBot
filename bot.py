@@ -1,4 +1,5 @@
 import telebot
+import os
 import requests
 import json
 import sqlite3
@@ -6,8 +7,8 @@ import schedule
 import time
 import threading
 
-bot_token = '6092258309:AAHzHQt34QQfYc7kUw2fWrf22DbIOhiqeeY'
-api_key = 'ELRC0MAFS54BPPDR'
+bot_token = os.getenv("TELEGRAM_BOT_TOKEN")
+api_key = os.getenv("API_KEY")
 bot = telebot.TeleBot(bot_token)
 
 # Создание базы данных
